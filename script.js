@@ -1,10 +1,10 @@
 game();
 function computerPlay(){
-    let opponent_choice = getRandomNumber(3)
-    if(opponent_choice == 0){
+    let opponentChoice = getRandomNumber(3)
+    if(opponentChoice == 0){
         return "Rock";
     }
-    else if(opponent_choice == 1){
+    else if(opponentChoice == 1){
         return "Paper";
     }
     else{
@@ -12,13 +12,14 @@ function computerPlay(){
     }
 }
 function playRound(){
-    let player_choice = "Rock";
-    let cpu_choice = computerPlay()
-    console.log("Opponent's choice: " + cpu_choice)
-    if(cpu_choice == "Rock"){
+    let playerChoice = window.prompt("Enter choice(Rock/Paper/Scissors): ")
+    let cpuChoice = computerPlay()
+    console.log("Player's choice: " + playerChoice)
+    console.log("Opponent's choice: " + cpuChoice)
+    if(cpuChoice == "Rock"){
         return "You both chose rock, it's a tie.";
     }
-    else if(cpu_choice == "Paper"){
+    else if(cpuChoice == "Paper"){
         return "Paper covers rock, you lose!";
     }
     else{
