@@ -12,18 +12,20 @@ function computerPlay(){
     }
 }
 function playRound(){
-    let playerChoice = window.prompt("Enter choice(Rock/Paper/Scissors): ")
-    let cpuChoice = computerPlay()
-    console.log("Player's choice: " + playerChoice)
-    console.log("Opponent's choice: " + cpuChoice)
-    if(cpuChoice == "Rock"){
-        return "You both chose rock, it's a tie.";
-    }
-    else if(cpuChoice == "Paper"){
-        return "Paper covers rock, you lose!";
+    let playerChoice = window.prompt("Enter choice(Rock/Paper/Scissors): ");
+    let cpuChoice =   computerPlay();
+    
+    console.log("Player's choice: " + playerChoice);
+    console.log("Opponent's choice: " + cpuChoice);
+    
+    let playerChoiceUpper = playerChoice.toUpperCase();
+    let cpuChoiceUpper = cpuChoice.toUpperCase();
+
+    if(cpuChoiceUpper == playerChoiceUpper){
+        return "It's a tie"
     }
     else{
-        return "Rock beats scissors, you win!";
+        return "It's not a tie"
     }
 }
 function getRandomNumber(max){
@@ -31,6 +33,6 @@ function getRandomNumber(max){
 }
 function game(){
     for(let i = 0; i < 5; i++){
-        console.log(playRound());
+        console.log(playRound())
     }
 }
