@@ -10,14 +10,15 @@ function computerPlay(){
         return "Scissors"
     }
 }
-console.log(computerPlay())
+console.log(playRound())
 function playRound(){
     let player_choice = "Rock"
-    let opponent_choice = computerPlay()
-    if(opponent_choice = "Rock"){
+    let cpu_choice = computerPlay()
+    console.log(cpu_choice)
+    if(cpu_choice == "Rock"){
         return "You both chose rock, it's a tie."
     }
-    else if(opponent_choice = "Paper"){
+    else if(cpu_choice == "Paper"){
         return "Paper covers rock, you lose!"
     }
     else{
