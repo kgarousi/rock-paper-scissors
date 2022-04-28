@@ -1,3 +1,4 @@
+game()
 function computerPlay(){
     let opponent_choice = getRandomNumber(3)
     if(opponent_choice == 0){
@@ -10,7 +11,6 @@ function computerPlay(){
         return "Scissors"
     }
 }
-console.log(playRound())
 function playRound(){
     let player_choice = "Rock"
     let cpu_choice = computerPlay()
@@ -27,4 +27,9 @@ function playRound(){
 }
 function getRandomNumber(max){
     return Math.floor(Math.random() * max)
+}
+function game(){
+    for(let i = 0; i < 5; i++){
+        console.log(playRound())
+    }
 }
