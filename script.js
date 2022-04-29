@@ -22,7 +22,7 @@ function playRound(){
     let cpuChoiceUpper = cpuChoice.toUpperCase();
 
     if(cpuChoiceUpper == playerChoiceUpper){
-        return "You both chose " + playerChoice + " It's a tie"
+        return "You both chose " + cpuChoice + " It's a tie"
     }
     else if(cpuChoiceUpper == "ROCK"  && playerChoiceUpper == "PAPER"){
         return "Paper covers rock, you win!";
