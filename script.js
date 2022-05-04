@@ -11,9 +11,8 @@ function computerPlay(){
         return "Scissors";
     }
 }
-function playRound(){
-    let playerChoice = window.prompt("Enter choice(Rock/Paper/Scissors): ");
-    let cpuChoice =   computerPlay();
+function playRound(playerChoice){
+     let cpuChoice =   computerPlay();
     
     console.log("Player's choice: " + playerChoice);
     console.log("Opponent's choice: " + cpuChoice);
@@ -47,7 +46,19 @@ function getRandomNumber(max){
     return Math.floor(Math.random() * max);
 }
 function game(){
-    for(let i = 0; i < 5; i++){
-        console.log(playRound())
-    }
+    const buttons = document.querySelectorAll('button');
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            if(button.id == "rockbtn"){
+                playRound("Rock");
+            }
+            else if(button.id == "paperbtn"){
+                playRound("Paper");
+            }
+            else if(button.id == "scissorbtn"){
+                playRound("Scissors")
+            }
+        });
+    });
 }
