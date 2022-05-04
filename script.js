@@ -12,45 +12,67 @@ function computerPlay(){
     }
 }
 function playRound(playerChoice){
-     let cpuChoice =  computerPlay();
-        
+    let cpuChoice =  computerPlay();
+    const container = document.querySelector('#container');
+    const playerDisplay = document.createElement('h3');
+    const computerDisplay = document.createElement('h3');
+    const results = document.createElement('h3');
+
     if(cpuChoice == playerChoice){
-        return("You both chose " + cpuChoice + ", it's a tie");
+        playerDisplay.textContent = "Player choice: " + playerChoice;
+        computerDisplay.textContent = "Computer choice: " + cpuChoice;
+        results.textContent = "You both chose " + playerChoice + ", it's a tie ";
+        container.appendChild(playerDisplay);
+        container.appendChild(computerDisplay);
+        container.appendChild(results);
     }
-    else if(cpuChoice == "Rock"  && playerChoice == "Paper"){
-        return("Player choice: " + playerChoice +"\n" +
-        "Computer Choice: " + cpuChoice + "\n" + 
-        "Paper covers rock, you win!");
+   else if(cpuChoice == "Rock"  && playerChoice == "Paper"){
+        playerDisplay.textContent = "Player choice: " + playerChoice;
+        computerDisplay.textContent = "Computer choice: " + cpuChoice;
+        results.textContent = "Paper covers rock, you win!";
+        container.appendChild(playerDisplay);
+        container.appendChild(computerDisplay);
+        container.appendChild(results);
     }
     else if(cpuChoice == "Paper"  && playerChoice == "Rock"){
-        return(
-        "Player choice: " + playerChoice +"\n" +
-        "Computer Choice: " + cpuChoice + "\n" + 
-        "Paper covers rock, you lose");
+        playerDisplay.textContent = "Player choice: " + playerChoice;
+        computerDisplay.textContent = "Computer choice: " + cpuChoice;
+        results.textContent = "Paper covers rock, you lose!"
+        container.appendChild(playerDisplay);
+        container.appendChild(computerDisplay);
+        container.appendChild(results);
     }
     else if(cpuChoice == "Scissors"  && playerChoice == "Rock"){
-        return(
-        "Player choice: " + playerChoice +"\n" +
-        "Computer Choice: " + cpuChoice + "\n" + 
-        "Rock beats scissors, you win!");
-    }
+        playerDisplay.textContent = "Player choice: " + playerChoice;
+        computerDisplay.textContent = "Computer choice: " + cpuChoice;
+        results.textContent = "Rock beats scissors, you win!";
+        container.appendChild(playerDisplay);
+        container.appendChild(computerDisplay);
+        container.appendChild(results);
+    }   
     else if(cpuChoice == "Rock"  && playerChoice == "Scissors"){
-        return(
-        "Player choice: " + playerChoice +"\n" +
-        "Computer Choice: " + cpuChoice + "\n" + 
-        "Rock beats scissors, you lose");
+        playerDisplay.textContent = "Player choice: " + playerChoice;
+        computerDisplay.textContent = "Computer choice: " + cpuChoice;
+        results.textContent = "Rock beats scissors, you lose";
+        container.appendChild(playerDisplay);
+        container.appendChild(computerDisplay);
+        container.appendChild(results);
     }
     else if(cpuChoice == "Scissors"  && playerChoice == "Paper"){
-        return(
-        "Player choice: " + playerChoice +"\n" +
-        "Computer Choice: " + cpuChoice + "\n" + 
-        "Scissors cuts paper, you lose");
+        playerDisplay.textContent = "Player choice: " + playerChoice;
+        computerDisplay.textContent = "Computer choice: " + cpuChoice;
+        results.textContent = "Scissors beats paper, you lose";
+        container.appendChild(playerDisplay);
+        container.appendChild(computerDisplay);
+        container.appendChild(results);
     }
     else if(cpuChoice == "Paper"  && playerChoice == "Scissors"){
-        return(
-        "Player choice: " + playerChoice +"\n" +
-        "Computer Choice: " + cpuChoice + "\n" + 
-        "Paper covers rock, you win!");
+        playerDisplay.textContent = "Player choice: " + playerChoice;
+        computerDisplay.textContent = "Computer choice: " + cpuChoice;
+        results.textContent = "Scissors beats paper, you win! ";
+        container.appendChild(playerDisplay);
+        container.appendChild(computerDisplay);
+        container.appendChild(results);
     }
 }
 function getRandomNumber(max){
@@ -58,23 +80,17 @@ function getRandomNumber(max){
 }
 function game(){
     const buttons = document.querySelectorAll('button');
-    const container = document.querySelector('#container');
-    const content = document.createElement('div');
-    content.classList.add('content')
 
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
             if(button.id == "rockbtn"){
-                content.textContent = playRound("Rock");
-                container.appendChild(content);
+                playRound("Rock");
             }
             else if(button.id == "paperbtn"){
-                content.textContent = playRound("Paper");
-                container.appendChild(content);
+                playRound("Paper");
             }
             else if(button.id == "scissorbtn"){
-                content.textContent = playRound("Scissors");
-                container.appendChild(content);
+                playRound("Scissors");
             }
         });
     });
