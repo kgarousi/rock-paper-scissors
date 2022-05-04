@@ -22,58 +22,40 @@ function playRound(playerChoice){
         playerDisplay.textContent = "Player choice: " + playerChoice;
         computerDisplay.textContent = "Computer choice: " + cpuChoice;
         results.textContent = "You both chose " + playerChoice + ", it's a tie ";
-        container.appendChild(playerDisplay);
-        container.appendChild(computerDisplay);
-        container.appendChild(results);
     }
    else if(cpuChoice == "Rock"  && playerChoice == "Paper"){
         playerDisplay.textContent = "Player choice: " + playerChoice;
         computerDisplay.textContent = "Computer choice: " + cpuChoice;
         results.textContent = "Paper covers rock, you win!";
-        container.appendChild(playerDisplay);
-        container.appendChild(computerDisplay);
-        container.appendChild(results);
     }
     else if(cpuChoice == "Paper"  && playerChoice == "Rock"){
         playerDisplay.textContent = "Player choice: " + playerChoice;
         computerDisplay.textContent = "Computer choice: " + cpuChoice;
         results.textContent = "Paper covers rock, you lose!"
-        container.appendChild(playerDisplay);
-        container.appendChild(computerDisplay);
-        container.appendChild(results);
     }
     else if(cpuChoice == "Scissors"  && playerChoice == "Rock"){
         playerDisplay.textContent = "Player choice: " + playerChoice;
         computerDisplay.textContent = "Computer choice: " + cpuChoice;
         results.textContent = "Rock beats scissors, you win!";
-        container.appendChild(playerDisplay);
-        container.appendChild(computerDisplay);
-        container.appendChild(results);
     }   
     else if(cpuChoice == "Rock"  && playerChoice == "Scissors"){
         playerDisplay.textContent = "Player choice: " + playerChoice;
         computerDisplay.textContent = "Computer choice: " + cpuChoice;
         results.textContent = "Rock beats scissors, you lose";
-        container.appendChild(playerDisplay);
-        container.appendChild(computerDisplay);
-        container.appendChild(results);
     }
     else if(cpuChoice == "Scissors"  && playerChoice == "Paper"){
         playerDisplay.textContent = "Player choice: " + playerChoice;
         computerDisplay.textContent = "Computer choice: " + cpuChoice;
         results.textContent = "Scissors beats paper, you lose";
-        container.appendChild(playerDisplay);
-        container.appendChild(computerDisplay);
-        container.appendChild(results);
     }
     else if(cpuChoice == "Paper"  && playerChoice == "Scissors"){
         playerDisplay.textContent = "Player choice: " + playerChoice;
         computerDisplay.textContent = "Computer choice: " + cpuChoice;
         results.textContent = "Scissors beats paper, you win! ";
-        container.appendChild(playerDisplay);
-        container.appendChild(computerDisplay);
-        container.appendChild(results);
     }
+    container.appendChild(playerDisplay);
+    container.appendChild(computerDisplay);
+    container.appendChild(results);
 }
 function getRandomNumber(max){
     return Math.floor(Math.random() * max);
