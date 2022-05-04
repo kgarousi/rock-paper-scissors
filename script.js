@@ -18,25 +18,25 @@ function playRound(playerChoice){
     console.log("Opponent's choice: " + cpuChoice);
     
     if(cpuChoice == playerChoice){
-        console.log("You both chose " + cpuChoice + ", it's a tie");
+        return("You both chose " + cpuChoice + ", it's a tie");
     }
     else if(cpuChoice == "Rock"  && playerChoice == "Paper"){
-        console.log("Paper covers rock, you win!");
+        return("Paper covers rock, you win!");
     }
     else if(cpuChoice == "Paper"  && playerChoice == "Rock"){
-        console.log("Paper covers rock, you lose");
+        return("Paper covers rock, you lose");
     }
     else if(cpuChoice == "Scissors"  && playerChoice == "Rock"){
-        console.log("Rock beats scissors, you win!");
+        return("Rock beats scissors, you win!");
     }
     else if(cpuChoice == "Rock"  && playerChoice == "Scissors"){
-        console.log("Rock beats scissors, you lose");
+        return("Rock beats scissors, you lose");
     }
     else if(cpuChoice == "Scissors"  && playerChoice == "Paper"){
-        console.log("Scissors cuts paper, you lose");
+        return("Scissors cuts paper, you lose");
     }
     else if(cpuChoice == "Paper"  && playerChoice == "Scissors"){
-        console.log("Paper covers rock, you win!");
+        return("Paper covers rock, you win!");
     }
 }
 function getRandomNumber(max){
@@ -44,17 +44,23 @@ function getRandomNumber(max){
 }
 function game(){
     const buttons = document.querySelectorAll('button');
+    const container = document.querySelector('#container');
+    const content = document.createElement('div');
+    content.classList.add('content')
 
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
             if(button.id == "rockbtn"){
-                playRound("Rock");
+                content.textContent = playRound("Rock");
+                container.appendChild(content);
             }
             else if(button.id == "paperbtn"){
-                playRound("Paper");
+                content.textContent = playRound("Paper");
+                container.appendChild(content);
             }
             else if(button.id == "scissorbtn"){
-                playRound("Scissors")
+                content.textContent = playRound("Scissors");
+                container.appendChild(content);
             }
         });
     });
