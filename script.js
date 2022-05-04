@@ -12,31 +12,45 @@ function computerPlay(){
     }
 }
 function playRound(playerChoice){
-     let cpuChoice =   computerPlay();
-    
-    console.log("Player's choice: " + playerChoice);
-    console.log("Opponent's choice: " + cpuChoice);
-    
+     let cpuChoice =  computerPlay();
+        
     if(cpuChoice == playerChoice){
         return("You both chose " + cpuChoice + ", it's a tie");
     }
     else if(cpuChoice == "Rock"  && playerChoice == "Paper"){
-        return("Paper covers rock, you win!");
+        return("Player choice: " + playerChoice +"\n" +
+        "Computer Choice: " + cpuChoice + "\n" + 
+        "Paper covers rock, you win!");
     }
     else if(cpuChoice == "Paper"  && playerChoice == "Rock"){
-        return("Paper covers rock, you lose");
+        return(
+        "Player choice: " + playerChoice +"\n" +
+        "Computer Choice: " + cpuChoice + "\n" + 
+        "Paper covers rock, you lose");
     }
     else if(cpuChoice == "Scissors"  && playerChoice == "Rock"){
-        return("Rock beats scissors, you win!");
+        return(
+        "Player choice: " + playerChoice +"\n" +
+        "Computer Choice: " + cpuChoice + "\n" + 
+        "Rock beats scissors, you win!");
     }
     else if(cpuChoice == "Rock"  && playerChoice == "Scissors"){
-        return("Rock beats scissors, you lose");
+        return(
+        "Player choice: " + playerChoice +"\n" +
+        "Computer Choice: " + cpuChoice + "\n" + 
+        "Rock beats scissors, you lose");
     }
     else if(cpuChoice == "Scissors"  && playerChoice == "Paper"){
-        return("Scissors cuts paper, you lose");
+        return(
+        "Player choice: " + playerChoice +"\n" +
+        "Computer Choice: " + cpuChoice + "\n" + 
+        "Scissors cuts paper, you lose");
     }
     else if(cpuChoice == "Paper"  && playerChoice == "Scissors"){
-        return("Paper covers rock, you win!");
+        return(
+        "Player choice: " + playerChoice +"\n" +
+        "Computer Choice: " + cpuChoice + "\n" + 
+        "Paper covers rock, you win!");
     }
 }
 function getRandomNumber(max){
