@@ -24,7 +24,7 @@ function playGame(){
     const buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
     button.addEventListener("click", () => {
-    playRound(button.id, getComputerChoice());
+    results.textContent =  playRound(button.id, getComputerChoice());
         });
     });
     
@@ -32,45 +32,46 @@ function playGame(){
     function playRound(humanSelection, computerSelection){
 
         if(humanSelection == "rock" && computerSelection == "paper"){
-            console.log("Paper beats rock, you lose!");
             computerScore++;
+            return "Paper beats rock, you lose!";
         }
         else if(humanSelection == "paper" && computerSelection == "scissors"){
-            console.log("Scissors beat paper, you lose!");
             computerScore++;
+            return "Scissors beat paper, you lose!";
         }
         else if(humanSelection == "scissors" && computerSelection == "rock"){
-            console.log("Rock beats scissors, you lose!");
+            
             computerScore++;
+            return "Rock beats scissors, you lose!";
         }
         else if(humanSelection == "scissors" && computerSelection == "paper"){
-            console.log("Scissors beats paper, you win!");
             humanScore++;
+            return "Scissors beats paper, you win!";
         }
         else if(humanSelection == "paper" && computerSelection == "rock"){
-            console.log("Paper beats rock, you win!");
             humanScore++;
+            return "Paper beats rock, you win!";
         }
         else if(humanSelection == "rock" && computerSelection == "scissors"){
-            console.log("Rock beats scissors, you win!");
             humanScore++;
+            return "Rock beats scissors, you win!";
         }
         else{
-            console.log("You both picked the same, it's a tie!");
+            return "You both picked the same, it's a tie!";
         }
-        getScore(humanScore, computerScore);
+       results.textContent = getScore(humanScore, computerScore)
     }
      function getScore(humanScore, computerScore){    
         if(humanScore < 5 || computerScore < 5){  
             if(humanScore < computerScore){
-                    console.log("Player score: " + humanScore + " Computer score: " + computerScore + " You lost the game!");
+                    return "Player score: " + humanScore + " Computer score: " + computerScore + " You lost the round!";
                 }
                 else if(humanScore > computerScore){
-                    console.log("Player score: " + humanScore + " Computer score: " + computerScore +  " You won the game!");
+                    return "Player score: " + humanScore + " Computer score: " + computerScore +  " You won the game!";
                 }
                 
                 else if(humanScore == computerScore){
-                    console.log("Player score: " + humanScore + " Computer score: " + computerScore + " It's a tie!");
+                    return "Player score: " + humanScore + " Computer score: " + computerScore + " It's a tie!";
                 }
         } 
         displayResults(humanScore, computerScore)   
