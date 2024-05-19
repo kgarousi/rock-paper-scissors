@@ -82,15 +82,19 @@ function playGame(){
             }
         } 
         const finalScore = document.querySelector("#final-score");
+        const playerScore = document.querySelector("#player-score");
+        const cpuScore = document.querySelector("#computer-score");
         finalScore.textContent = displayResults(humanScore, computerScore);
+        playerScore.textContent = "Human score: " + humanScore;
+        cpuScore.textContent = "Computer score: "  + computerScore;
     }
 
     function displayResults(humanScore, computerScore){
         if(humanScore == 5){
-            return "The game is over, you won! Final Score: You: " + humanScore + " Computer Score: " + computerScore;
+            return "The game is over, you won! Final Score: " ;
         }
         else if(computerScore == 5){
-            return "The game is over, you lost :(. Final Score: You: " + humanScore + " Computer Score: " + computerScore;
+            return "The game is over, you lost. Better luck next time! Final Score: " ;
         }
     }
 }
