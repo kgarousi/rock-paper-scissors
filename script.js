@@ -1,4 +1,3 @@
-
 function getComputerChoice(){
     let computerChoice =  Math.floor(Math.random() * 3)
 
@@ -15,14 +14,13 @@ function getComputerChoice(){
     }
 }
 
+
 function playGame(){
     
     let humanScore = 0;
     let computerScore = 0;
     let roundCounter = 0;
-
     const round = document.querySelector("#round");
-    
     const buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -98,6 +96,12 @@ function playGame(){
     }
 
     function displayResults(humanScore, computerScore){
+        const rockBtn = document.getElementById("rock");
+        const paperBtn = document.getElementById("paper");
+        const scissorsBtn = document.getElementById("scissors");
+        rockBtn.disabled =true;
+        paperBtn.disabled =true;
+        scissorsBtn.disabled =true;
         const score = document.querySelector(".game > .score");
         score.remove();
 
@@ -107,6 +111,8 @@ function playGame(){
         else if(computerScore == 5){
             return "The game is over, you lost. Better luck next time!" ;
         }
+
     }
 }
+
 playGame();
