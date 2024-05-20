@@ -28,7 +28,7 @@ function playGame(){
     button.addEventListener("click", () => {
         results.textContent =  playRound(button.id, getComputerChoice());
         roundCounter++;
-        round.textContent = "Rounds played " + roundCounter;   
+        round.textContent = "Rounds played: " + roundCounter;   
         });
     });
     

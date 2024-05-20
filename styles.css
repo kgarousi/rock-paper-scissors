@@ -52,3 +52,13 @@ html{
     justify-content: space-between;
     width: 400px;  
  }
+
+ h2{
+    background-color: #1f2937;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    border-radius: 12px;
+    margin: 14px;
+    border: #e5e7eb solid;
+ }
