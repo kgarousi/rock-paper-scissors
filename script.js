@@ -90,7 +90,7 @@ function playGame(humanSelection, computerSelection){
         humanScore++;
         score.textContent = "Player score: " + humanScore + " Computer score: " + computerScore;
         results.textContent = "Paper beats rock, you win! ";
-        if(computerScore == 5){
+        if(humanScore == 5){
             endGame();
         }
     }
@@ -98,7 +98,7 @@ function playGame(humanSelection, computerSelection){
         humanScore++;
         score.textContent = "Player score: " + humanScore + " Computer score: " + computerScore;
         results.textContent = "Rock beats scissors, you win!";
-        if(computerScore == 5){
+        if(humanScore == 5){
             endGame();
         }
     }
