@@ -25,14 +25,14 @@ function getComputerChoice(){
     rockBtn.addEventListener("click", function () {
         roundCounter++;
         round.textContent = "Rounds played: " + roundCounter;    
-        playGame("scissors", getComputerChoice());
+        playGame("rock", getComputerChoice());
     });
     
     
     paperBtn.addEventListener("click", function () {
         roundCounter++;
         round.textContent = "Rounds played: " + roundCounter;
-        playGame("scissors", getComputerChoice());
+        playGame("paper", getComputerChoice());
           
     });
     
