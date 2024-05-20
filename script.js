@@ -19,19 +19,27 @@ function playGame(){
     
     let humanScore = 0;
     let computerScore = 0;
+    let roundCounter = 0;
 
+    const round = document.querySelector("#round");
     
     const buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
     button.addEventListener("click", () => {
-    results.textContent =  playRound(button.id, getComputerChoice());
+        results.textContent =  playRound(button.id, getComputerChoice());
+        roundCounter++;
+        round.textContent = "Rounds played " + roundCounter;   
         });
     });
     
    
     function playRound(humanSelection, computerSelection){
-
         const score = document.querySelector("#score");
+        const playerChoice = document.querySelector("#player-choice");
+        const computerChoice = document.querySelector("#computer-choice");
+
+        playerChoice.textContent = "Player choice: " + humanSelection;
+        computerChoice.textContent = "Computer choice: " + computerSelection;
 
         if(humanSelection == "rock" && computerSelection == "paper"){
             computerScore++;
@@ -90,11 +98,14 @@ function playGame(){
     }
 
     function displayResults(humanScore, computerScore){
+        const score = document.querySelector(".game > .score");
+        score.remove();
+
         if(humanScore == 5){
-            return "The game is over, you won! Final Score: " ;
+            return "The game is over, you won!" ;
         }
         else if(computerScore == 5){
-            return "The game is over, you lost. Better luck next time! Final Score: " ;
+            return "The game is over, you lost. Better luck next time!" ;
         }
     }
 }
