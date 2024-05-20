@@ -23,6 +23,7 @@ html{
     opacity: 75%;
     border: #e5e7eb solid;
     margin: 14px;
+    border-radius: 12px;
 }
  .buttons {
     margin: 14px;
@@ -64,11 +65,11 @@ html{
  }
 
  h2{
-    background-color: #1f2937;
+    background-color: #121b29;
     width: 100%;
     height: 40px;
     text-align: center;
-    border: #e5e7eb solid;
+    border-radius: 12px;
  }
  .game>.new-game{
     border-radius: 12px;
