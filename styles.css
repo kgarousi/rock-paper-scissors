@@ -14,7 +14,7 @@ body{
 }
  .game{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     color: #e5e7eb;
@@ -27,8 +27,6 @@ body{
     gap: 14px;
 }
  .buttons {
-    margin: 14px;
-    margin-top: 40px;
     display: flex;
     flex: row;
     justify-content: center;
@@ -58,14 +56,12 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    width: 400px;  
+    justify-content: space-between;  
  }
 
- h2{
-    height: 40px;
-    text-align: center;
-    border-radius: 12px;
+ .selection-header{
+   display: flex;
+   text-align: center;
  }
  .game>.new-game{
     border-radius: 12px;
