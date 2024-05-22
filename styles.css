@@ -91,6 +91,6 @@ body{
    }
    .score{
       display: flex;
-      flex-shrink: 1;
+      min-width: 100%;
    }
  }
