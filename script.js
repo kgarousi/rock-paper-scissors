@@ -127,7 +127,7 @@ function endGame(){
     }
 }
 
-const  newGameBtn = document.querySelector(".new-game")
+const  newGameBtn = document.querySelector("#new-game-button")
 
 newGameBtn.addEventListener("click", function () {
     rockBtn.disabled = false;
