@@ -9,6 +9,7 @@ body{
     background-size: cover;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100vw;
     min-height: 100vh;
 }
@@ -24,8 +25,7 @@ body{
     padding: 5em;
     border-radius: 12px;
     gap: 14px;
-    max-height: 90%;
-    max-width: 90%;
+    height: 80%;
 }
  .buttons {
     display: flex;
