@@ -71,7 +71,19 @@ button:hover{
    width: 80%;
    flex-direction: row;
    justify-content: space-evenly;
+   gap: 5px;
 }
 #winner{
    color: white;
+   text-align: center;
+}
+
+@media (width <= 725px){
+   .game{
+      width: fit-content;
+      padding: 2em;
+   }
+   button{
+      flex-shrink: 1;
+   }
 }
