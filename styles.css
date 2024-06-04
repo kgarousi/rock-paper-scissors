@@ -88,7 +88,7 @@ button:hover{
 
 @media (width <= 725px){
    .game{
-      max-width: 80vw;
+      max-width: 95vw;
       max-height: 90vh;
       padding: 2em;
    }
@@ -98,7 +98,7 @@ button:hover{
 }
 @media (height <= 725px){
    .game{
-      max-width: 80vw;
+      max-width: 95vw;
       max-height: 90vh;
       padding: 2em;
    }
